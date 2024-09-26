@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import emailjs from '@emailjs/browser';
 
 const AdvisorRegistration = () => {
   const formRef = useRef(null);
@@ -11,30 +12,14 @@ const AdvisorRegistration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(formRef.current);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      const response = await fetch('/api/sendmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...data,
-          to: 'hitoshigoto@deeptell.jp',
-        }),
-      });
-
-      if (response.ok) {
+    // emailjsを使ってメールを送信
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+        console.log('Registration successful!', result.text);
         // 登録完了時の処理
-        console.log('Registration successful!');
-      } else {
-        console.error('Registration failed:', response.status);
-      }
-    } catch (error) {
-      console.error('Error during registration:', error);
-    }
+      }, (error) => {
+        console.error('Registration failed:', error.text);
+      });
   };
 
   return (
