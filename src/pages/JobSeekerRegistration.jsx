@@ -14,7 +14,7 @@ const JobSeekerRegistration = () => {
     <div className="container mx-auto px-4 py-8">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">求職者登録</CardTitle>
+          <CardTitle className="text-2xl font-bold">アドバイザー登録</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">

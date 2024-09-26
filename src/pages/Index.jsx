@@ -8,7 +8,9 @@ import SimpleContactForm from '../components/SimpleContactForm';
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <img src="/advisors_sample.png" alt="Advisors" className="w-full h-full object-cover" />
       <main className="container mx-auto mt-8 px-4">
+      
         <section className="mb-16">
           <div className="grid grid-cols-2 gap-8">
             <div>
@@ -19,11 +21,12 @@ const Index = () => {
                 <Button variant="outline">顧問に登録</Button>
               </div>
             </div>
+            
             <div className="grid grid-cols-2 gap-4">
-              <img src="/advisor1.jpg" alt="Advisor 1" className="w-full h-full object-cover" />
-              <img src="/advisor2.jpg" alt="Advisor 2" className="w-full h-full object-cover" />
-              <img src="/advisor3.jpg" alt="Advisor 3" className="w-full h-full object-cover" />
-              <img src="/advisor4.jpg" alt="Advisor 4" className="w-full h-full object-cover" />
+              <img src="/advisor_sample_1.png" alt="Advisor 1" className="w-full h-full object-cover" />
+              <img src="/advisor_sample_2.png" alt="Advisor 2" className="w-full h-full object-cover" />
+              <img src="/advisor_sample_3.png" alt="Advisor 3" className="w-full h-full object-cover" />
+              <img src="/advisor_sample_4.png" alt="Advisor 4" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>
