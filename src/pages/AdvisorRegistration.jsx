@@ -6,6 +6,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import emailjs from '@emailjs/browser';
 
+const emailjs = {
+  serviceID: '',
+  templateID: '',
+  publicKey: ''
+}
+
 const AdvisorRegistration = () => {
   const formRef = useRef(null);
 

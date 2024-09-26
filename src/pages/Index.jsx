@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PhoneCall } from 'lucide-react';
 import SimpleContactForm from '../components/SimpleContactForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faHandshake, faBriefcase, faStar, faChartBar, faLock, faFileSignature, faGlobe, faBook, faLightbulb, faChartLine, faRobot  } from '@fortawesome/free-solid-svg-icons';
 
 const Index = () => {
   return (
@@ -64,24 +66,25 @@ const Index = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">サービスの特徴</h2>
+          <img src="/service.png" alt="Advisors" className="w-full h-full object-cover" />
           <div className="grid grid-cols-4 gap-8">
             {[
-              { icon: "👥", title: "豊富な人材" },
-              { icon: "🤝", title: "マッチング" },
-              { icon: "💼", title: "経験豊富" },
-              { icon: "🌟", title: "高品質" },
-              { icon: "📊", title: "データ分析" },
-              { icon: "🔒", title: "セキュリティ" },
-              { icon: "📝", title: "契約サポート" },
-              { icon: "🌐", title: "グローバル" },
-              { icon: "📚", title: "教育支援" },
-              { icon: "💡", title: "イノベーション" },
-              { icon: "📈", title: "成長支援" },
-              { icon: "🤖", title: "AI活用" },
+              { icon: "fa-users", title: "豊富な人材" },
+              { icon: "fa-handshake", title: "マッチング" },
+              { icon: "fa-briefcase", title: "経験豊富" },
+              { icon: "fa-star", title: "高品質" },
+              { icon: "fa-chart-bar", title: "データ分析" },
+              { icon: "fa-lock", title: "セキュリティ" },
+              { icon: "fa-file-signature", title: "契約サポート" },
+              { icon: "fa-globe", title: "グローバル" },
+              { icon: "fa-book", title: "教育支援" },
+              { icon: "fa-lightbulb", title: "イノベーション" },
+              { icon: "fa-chart-line", title: "成長支援" },
+              { icon: "fa-robot", title: "AI活用" },
             ].map((feature, index) => (
               <Card key={index}>
                 <CardContent className="p-4 text-center">
-                  <div className="text-4xl mb-2">{feature.icon}</div>
+                  <div className="text-4xl mb-2"><i className={`fas ${feature.icon}`}></i></div>
                   <h3 className="font-semibold">{feature.title}</h3>
                 </CardContent>
               </Card>
