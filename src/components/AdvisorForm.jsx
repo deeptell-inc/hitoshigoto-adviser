@@ -17,7 +17,7 @@ const AdvisorForm = () => {
   return (
     <Card className="mb-12">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">顧問登録</CardTitle>
+        <CardTitle className="text-2xl font-bold">アドバイザー登録</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">

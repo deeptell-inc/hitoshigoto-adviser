@@ -6,10 +6,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import emailjs from '@emailjs/browser';
 
-const emailjs = {
-  serviceID: '',
-  templateID: '',
-  publicKey: ''
+const EMAILJS_VALUES = {
+  serviceID: 'service_melpwjj',
+  templateID: 'template_3oo14lf',
+  publicKey: 'iL6b1-lPIHzRCo4I1'
 }
 
 const AdvisorRegistration = () => {
@@ -19,7 +19,7 @@ const AdvisorRegistration = () => {
     e.preventDefault();
 
     // emailjsを使ってメールを送信
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm(EMAILJS_VALUES.serviceID, EMAILJS_VALUES.templateID, form.current, EMAILJS_VALUES.publicKey)
       .then((result) => {
         console.log('Registration successful!', result.text);
         // 登録完了時の処理
@@ -32,7 +32,7 @@ const AdvisorRegistration = () => {
     <div className="container mx-auto px-4 py-8">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">顧問アドバイザー登録</CardTitle >
+          <CardTitle className="text-2xl font-bold">アドバイザーアドバイザー登録</CardTitle >
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4" ref={formRef}>

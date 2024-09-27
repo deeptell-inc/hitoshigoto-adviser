@@ -8,7 +8,7 @@ import AdvisorTestimonials from '../components/AdvisorTestimonials';
 const AdvisorMatching = () => {
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8 text-center text-blue-600">顧問アドバイザーマッチングサービス</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center text-blue-600">アドバイザーアドバイザーマッチングサービス</h1>
       
       <div className="mb-12">
         <img src="/advisor-image.jpg" alt="Advisor Matching" className="w-full h-auto object-cover rounded-lg shadow-lg mb-8" />
@@ -16,7 +16,7 @@ const AdvisorMatching = () => {
           <CardHeader>
             <CardTitle>あなたのスキルを活かす新しい機会</CardTitle>
             <CardDescription>
-              ヒトシゴトの顧問アドバイザーマッチングサービスは、あなたのスキルと経験を活かして、効率的に収入を増やすチャンスを提供します。
+              ヒトシゴトのアドバイザーアドバイザーマッチングサービスは、あなたのスキルと経験を活かして、効率的に収入を増やすチャンスを提供します。
             </CardDescription>
           </CardHeader>
           <CardContent>

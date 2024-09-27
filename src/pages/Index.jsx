@@ -16,11 +16,11 @@ const Index = () => {
         <section className="mb-16">
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h2 className="text-4xl font-bold mb-4">経営顧問の力を引き出し、<br />事業拡大・改善をサポート</h2>
+              <h2 className="text-4xl font-bold mb-4">経営アドバイザーの力を引き出し、<br />事業拡大・改善をサポート</h2>
               <p className="text-lg mb-8">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。</p>
               <div className="grid grid-cols-2 gap-4">
-                <Button className="bg-blue-600 text-white">顧問を探す</Button>
-                <Button variant="outline">顧問に登録</Button>
+                <Button className="bg-blue-600 text-white">アドバイザーを探す</Button>
+                <Button variant="outline">アドバイザーに登録</Button>
               </div>
             </div>
             
@@ -93,7 +93,7 @@ const Index = () => {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">顧問紹介</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">アドバイザー紹介</h2>
           <div className="grid grid-cols-3 gap-8">
             {[
               { name: "山田 太郎", role: "経営戦略アドバイザー", image: "/advisor1.jpg" },
@@ -110,7 +110,7 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Button>顧問一覧を見る</Button>
+            <Button>アドバイザー一覧を見る</Button>
           </div>
         </section>
 
@@ -118,16 +118,16 @@ const Index = () => {
           <div className="grid grid-cols-2 gap-8">
             <Card className="bg-gray-100">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">顧問をお探しの方</h3>
-                <p className="mb-4">経営課題の解決に向けて、最適な顧問をご紹介します。</p>
-                <Button>顧問を探す</Button>
+                <h3 className="text-xl font-semibold mb-2">アドバイザーをお探しの方</h3>
+                <p className="mb-4">経営課題の解決に向けて、最適なアドバイザーをご紹介します。</p>
+                <Button>アドバイザーを探す</Button>
               </CardContent>
             </Card>
             <Card className="bg-gray-100">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">顧問に登録したい方</h3>
+                <h3 className="text-xl font-semibold mb-2">アドバイザーに登録したい方</h3>
                 <p className="mb-4">あなたの経験とスキルを活かして、企業の成長をサポートしませんか？</p>
-                <Button>顧問に登録</Button>
+                <Button>アドバイザーに登録</Button>
               </CardContent>
             </Card>
           </div>
@@ -149,7 +149,7 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-2">サービス</h4>
               <ul>
-                <li><Link to="/services" className="hover:text-blue-300">顧問紹介</Link></li>
+                <li><Link to="/services" className="hover:text-blue-300">アドバイザー紹介</Link></li>
                 <li><Link to="/services" className="hover:text-blue-300">人材紹介</Link></li>
               </ul>
             </div>
