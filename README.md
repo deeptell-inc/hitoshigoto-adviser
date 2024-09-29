@@ -1,3 +1,8 @@
+# ヒトシゴト
+
+ヒト：#6FBA2C
+シゴト：#006CB8
+
 # Welcome to your GPT Engineer project
 
 ## Project info

@@ -31,8 +31,6 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
- 
-    --radius: 0.5rem;
   }
  
   .dark {
@@ -82,4 +80,13 @@ body {
 footer,
 button {
   font-family: sans-serif; /* デフォルトの sans-serif フォントに戻す */
+}
+
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
+}
+
+.bg-gradient {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600;
 }

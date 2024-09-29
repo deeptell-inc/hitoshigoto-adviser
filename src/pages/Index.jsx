@@ -6,6 +6,8 @@ import { PhoneCall } from 'lucide-react';
 import SimpleContactForm from '../components/SimpleContactForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faHandshake, faBriefcase, faStar, faChartBar, faLock, faFileSignature, faGlobe, faBook, faLightbulb, faChartLine, faRobot  } from '@fortawesome/free-solid-svg-icons';
+import AdvisorAppeal from './AdvisorAppeal';
+import ClientAppeal from './ClientAppeal';
 
 const Index = () => {
   return (
@@ -19,8 +21,8 @@ const Index = () => {
               <h2 className="text-4xl font-bold mb-4">経営アドバイザーの力を引き出し、<br />事業拡大・改善をサポート</h2>
               <p className="text-lg mb-8">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。</p>
               <div className="grid grid-cols-2 gap-4">
-                <Button className="bg-blue-600 text-white">アドバイザーを探す</Button>
-                <Button variant="outline">アドバイザーに登録</Button>
+                <Button className="bg-[#6FBA2C] text-white">アドバイザーに登録</Button>
+                <Button className="bg-[#006CB8] text-white">アドバイザーを探す</Button>
               </div>
             </div>
             
@@ -29,37 +31,6 @@ const Index = () => {
               <img src="/advisor_sample_2.png" alt="Advisor 2" className="w-full h-full object-cover" />
               <img src="/advisor_sample_3.png" alt="Advisor 3" className="w-full h-full object-cover" />
               <img src="/advisor_sample_4.png" alt="Advisor 4" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">事例紹介</h2>
-          <div className="grid grid-cols-2 gap-8">
-            <Card className="bg-gray-100">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">経営課題を解決したい</h3>
-                <p>経営課題の解決に向けて、専門家のアドバイスを受けられます。</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gray-100">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">新規事業を立ち上げたい</h3>
-                <p>新規事業の立ち上げに関する戦略立案や実行支援を行います。</p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8">実績紹介</h2>
-          <div className="grid grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">国内最大の経営者データベース</h3>
-              <p className="text-lg mb-4">30,000名超の経営者データを保有しています。</p>
-            </div>
-            <div>
-              <img src="/database-image.jpg" alt="Database" className="w-full h-auto object-cover" />
             </div>
           </div>
         </section>
@@ -92,6 +63,9 @@ const Index = () => {
           </div>
         </section>
 
+        <AdvisorAppeal />
+        <ClientAppeal />
+
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">アドバイザー紹介</h2>
           <div className="grid grid-cols-3 gap-8">
@@ -114,20 +88,51 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="mb-16">
+        {/* <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">事例紹介</h2>
           <div className="grid grid-cols-2 gap-8">
             <Card className="bg-gray-100">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">アドバイザーをお探しの方</h3>
-                <p className="mb-4">経営課題の解決に向けて、最適なアドバイザーをご紹介します。</p>
-                <Button>アドバイザーを探す</Button>
+                <h3 className="text-xl font-semibold mb-2">経営課題を解決したい</h3>
+                <p>経営課題の解決に向けて、専門家のアドバイスを受けられます。</p>
               </CardContent>
             </Card>
             <Card className="bg-gray-100">
               <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">新規事業を立ち上げたい</h3>
+                <p>新規事業の立ち上げに関する戦略立案や実行支援を行います。</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section> */}
+
+        {/* <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8">実績紹介</h2>
+          <div className="grid grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">国内最大の経営者データベース</h3>
+              <p className="text-lg mb-4">30,000名超の経営者データを保有しています。</p>
+            </div>
+            <div>
+              <img src="/database-image.jpg" alt="Database" className="w-full h-auto object-cover" />
+            </div>
+          </div>
+        </section> */}
+
+        <section className="mb-16">
+          <div className="grid grid-cols-2 gap-8">
+            <Card className="bg-gray-100">
+              <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">アドバイザーに登録したい方</h3>
                 <p className="mb-4">あなたの経験とスキルを活かして、企業の成長をサポートしませんか？</p>
-                <Button>アドバイザーに登録</Button>
+                <Button className="bg-[#6FBA2C] text-white">アドバイザーに登録</Button>
+              </CardContent>
+            </Card>
+            <Card className="bg-gray-100">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">アドバイザーをお探しの方</h3>
+                <p className="mb-4">経営課題の解決に向けて、最適なアドバイザーをご紹介します。</p>
+                <Button className="bg-[#006CB8] text-white">アドバイザーを探す</Button>
               </CardContent>
             </Card>
           </div>
