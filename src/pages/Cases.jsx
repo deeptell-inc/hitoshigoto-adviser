@@ -1,5 +1,13 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { PhoneCall } from 'lucide-react';
+import SimpleContactForm from '../components/SimpleContactForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faHandshake, faBriefcase, faStar, faChartBar, faLock, faFileSignature, faGlobe, faBook, faLightbulb, faChartLine, faRobot  } from '@fortawesome/free-solid-svg-icons';
+import AdvisorAppeal from './AdvisorAppeal';
+import ClientAppeal from './ClientAppeal';
 
 const Cases = () => {
   const cases = [
@@ -11,18 +19,23 @@ const Cases = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">事例一覧</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cases.map((case_, index) => (
-          <Card key={index}>
-            <CardHeader>
-              <CardTitle>{case_.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>{case_.content}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">アドバイザー紹介</h2>
+          <div className="grid grid-cols-3 gap-8">
+            {[
+              { name: "谷前　太喜", role: "AI技術顧問", image: "/tanimae.png" },
+              { name: "杉本　迅", role: "AI技術顧問", image: "/sugimoto.png" },
+            ].map((advisor, index) => (
+              <Card key={index}>
+                <CardContent className="p-4 text-center">
+                  <img src={advisor.image} alt={advisor.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                  <h3 className="font-semibold">{advisor.name}</h3>
+                  <p className="text-gray-600">{advisor.role}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+      </section>
     </div>
   );
 };

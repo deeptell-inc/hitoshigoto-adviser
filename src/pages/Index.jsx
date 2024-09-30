@@ -12,7 +12,7 @@ import ClientAppeal from './ClientAppeal';
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      <img src="/advisors_sample.png" alt="Advisors" className="w-full h-full object-cover" />
+      <img src="/advisors.png" alt="Advisors" className="w-full h-full object-cover" />
       <main className="container mx-auto mt-8 px-4">
       
         <section className="mb-16">
@@ -21,8 +21,12 @@ const Index = () => {
               <h2 className="text-4xl font-bold mb-4">経営アドバイザーの力を引き出し、<br />事業拡大・改善をサポート</h2>
               <p className="text-lg mb-8">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。</p>
               <div className="grid grid-cols-2 gap-4">
-                <Button className="bg-[#6FBA2C] text-white">アドバイザーに登録</Button>
-                <Button className="bg-[#006CB8] text-white">アドバイザーを探す</Button>
+                <Link to="/job-seeker-registration">
+                  <Button className="bg-[#6FBA2C] text-white">アドバイザーに登録</Button>
+                </Link>
+                <Link to="/corporate-registration">
+                  <Button className="bg-[#006CB8] text-white">アドバイザーを探す</Button>
+                </Link>
               </div>
             </div>
             
@@ -70,9 +74,8 @@ const Index = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">アドバイザー紹介</h2>
           <div className="grid grid-cols-3 gap-8">
             {[
-              { name: "山田 太郎", role: "経営戦略アドバイザー", image: "/advisor1.jpg" },
-              { name: "鈴木 花子", role: "マーケティング専門家", image: "/advisor2.jpg" },
-              { name: "佐藤 次郎", role: "財務コンサルタント", image: "/advisor3.jpg" },
+              { name: "谷前　太喜", role: "AI技術顧問", image: "/tanimae.png" },
+              { name: "杉本　迅", role: "AI技術顧問", image: "/sugimoto.png" },
             ].map((advisor, index) => (
               <Card key={index}>
                 <CardContent className="p-4 text-center">
@@ -84,7 +87,9 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Button>アドバイザー一覧を見る</Button>
+            <Link to="/cases">
+              <Button>アドバイザー一覧を見る</Button>
+            </Link>
           </div>
         </section>
 
