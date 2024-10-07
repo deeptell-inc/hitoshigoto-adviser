@@ -6,8 +6,8 @@ const About = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">会社概要</h1>
       <Card>
-        <CardContent>
-          <table className="table-fixed w-full">
+        <CardContent className="py-4">
+          <table className="table-fixed w-full py-4">
             <tbody>
               <tr>
                 <td className="border px-4 py-2 w-1/3 font-bold">会社名</td>

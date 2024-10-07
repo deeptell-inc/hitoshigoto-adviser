@@ -9,6 +9,7 @@ import JobSeekerRegistration from "./pages/JobSeekerRegistration";
 import CorporateRegistration from "./pages/CorporateRegistration";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Cases from "./pages/Cases";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { Link } from "react-router-dom";
 
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/cases" element={<Cases />} />
             </Routes>
           </main>
           <footer className="bg-gray-800 text-white py-8">

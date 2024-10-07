@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faHandshake, faBriefcase, faStar, faChartBar, faLock, faFileSignature, faGlobe, faBook, faLightbulb, faChartLine, faRobot  } from '@fortawesome/free-solid-svg-icons';
 import AdvisorAppeal from './AdvisorAppeal';
 import ClientAppeal from './ClientAppeal';
+import Diagram from '../components/Diagram';
 
 const Index = () => {
   return (
@@ -16,7 +17,7 @@ const Index = () => {
       <main className="container mx-auto mt-8 px-4">
       
         <section className="mb-16">
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h2 className="text-4xl font-bold mb-4">経営アドバイザーの力を引き出し、<br />事業拡大・改善をサポート</h2>
               <p className="text-lg mb-8">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。</p>
@@ -30,7 +31,7 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid grid-cols-2 gap-4">
               <img src="/advisor_sample_1.png" alt="Advisor 1" className="w-full h-full object-cover" />
               <img src="/advisor_sample_2.png" alt="Advisor 2" className="w-full h-full object-cover" />
               <img src="/advisor_sample_3.png" alt="Advisor 3" className="w-full h-full object-cover" />
@@ -41,8 +42,8 @@ const Index = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">サービスの特徴</h2>
-          <img src="/service.png" alt="Advisors" className="w-full h-full object-cover" />
-          <div className="grid grid-cols-4 gap-8">
+          <Diagram />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { icon: "fa-users", title: "豊富な人材" },
               { icon: "fa-handshake", title: "マッチング" },
@@ -72,7 +73,7 @@ const Index = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">アドバイザー紹介</h2>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { name: "谷前　太喜", role: "AI技術顧問", image: "/tanimae.png" },
               { name: "杉本　迅", role: "AI技術顧問", image: "/sugimoto.png" },
@@ -125,19 +126,23 @@ const Index = () => {
         </section> */}
 
         <section className="mb-16">
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-gray-100">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">アドバイザーに登録したい方</h3>
                 <p className="mb-4">あなたの経験とスキルを活かして、企業の成長をサポートしませんか？</p>
-                <Button className="bg-[#6FBA2C] text-white">アドバイザーに登録</Button>
+                <Link to="/job-seeker-registration">
+                  <Button className="bg-[#6FBA2C] text-white">アドバイザーに登録</Button>
+                </Link>
               </CardContent>
             </Card>
             <Card className="bg-gray-100">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">アドバイザーをお探しの方</h3>
                 <p className="mb-4">経営課題の解決に向けて、最適なアドバイザーをご紹介します。</p>
-                <Button className="bg-[#006CB8] text-white">アドバイザーを探す</Button>
+                <Link to="/corporate-registration">
+                  <Button className="bg-[#006CB8] text-white">アドバイザーを探す</Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
