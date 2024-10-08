@@ -9,6 +9,7 @@ import { faUsers, faHandshake, faBriefcase, faStar, faChartBar, faLock, faFileSi
 import AdvisorAppeal from './AdvisorAppeal';
 import ClientAppeal from './ClientAppeal';
 import Diagram from '../components/Diagram';
+import Info from '../components/Info';
 
 const Index = () => {
   return (
@@ -68,6 +69,8 @@ const Index = () => {
           </div>
         </section>
 
+        <Info />
+
         <AdvisorAppeal />
         <ClientAppeal />
 
@@ -88,7 +91,7 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link to="/cases">
+            <Link to="/alliance">
               <Button>アドバイザー一覧を見る</Button>
             </Link>
           </div>

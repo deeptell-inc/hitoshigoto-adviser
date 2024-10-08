@@ -36,7 +36,7 @@ const Navigation = () => {
               </li>
               <li>
                 <Link
-                  to="/cases"
+                  to="s"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   事例
@@ -62,7 +62,7 @@ const Navigation = () => {
               </li>
               <li>
                 <Link
-                  to="/alliance"
+                  to="/alliances"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   アライアンス
