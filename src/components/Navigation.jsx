@@ -36,7 +36,7 @@ const Navigation = () => {
               </li>
               <li>
                 <Link
-                  to="s"
+                  to="cases"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   事例

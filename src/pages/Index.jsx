@@ -69,8 +69,6 @@ const Index = () => {
           </div>
         </section>
 
-        <Info />
-
         <AdvisorAppeal />
         <ClientAppeal />
 
@@ -150,6 +148,8 @@ const Index = () => {
             </Card>
           </div>
         </section>
+
+        <Info />
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">お問い合わせ</h2>
