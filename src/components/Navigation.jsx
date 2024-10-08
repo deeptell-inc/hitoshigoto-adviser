@@ -7,7 +7,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileMenuOpen(window.innerWidth <= 768);
+      setIsMobileMenuOpen(false);
     };
 
     window.addEventListener('resize', handleResize);

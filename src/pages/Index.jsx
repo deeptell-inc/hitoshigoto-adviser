@@ -13,7 +13,7 @@ import Diagram from '../components/Diagram';
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      <img src="/advisors.png" alt="Advisors" className="w-full h-full object-cover" />
+      <img src="/advisors.png" alt="Advisors" className="w-full h-auto object-cover" />
       <main className="container mx-auto mt-8 px-4">
       
         <section className="mb-16">
@@ -31,11 +31,11 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="grid md:grid grid-cols-2 gap-4">
-              <img src="/advisor_sample_1.png" alt="Advisor 1" className="w-full h-full object-cover" />
-              <img src="/advisor_sample_2.png" alt="Advisor 2" className="w-full h-full object-cover" />
-              <img src="/advisor_sample_3.png" alt="Advisor 3" className="w-full h-full object-cover" />
-              <img src="/advisor_sample_4.png" alt="Advisor 4" className="w-full h-full object-cover" />
+            <div className="grid grid-cols-2 gap-4">
+              <img src="/advisor_sample_1.png" alt="Advisor 1" className="w-full h-auto object-cover" />
+              <img src="/advisor_sample_2.png" alt="Advisor 2" className="w-full h-auto object-cover" />
+              <img src="/advisor_sample_3.png" alt="Advisor 3" className="w-full h-auto object-cover" />
+              <img src="/advisor_sample_4.png" alt="Advisor 4" className="w-full h-auto object-cover" />
             </div>
           </div>
         </section>
@@ -156,7 +156,7 @@ const Index = () => {
 
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">ヒトシゴト</h3>
               <p>革新的な人材紹介サービスを提供</p>
