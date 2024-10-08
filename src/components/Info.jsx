@@ -137,12 +137,6 @@ const Info = () => {
           </div>
         </CardContent>
       </Card>
-
-      <div className="mt-8 text-center text-white">
-        <img src="/placeholder.svg" alt="ヒトシゴト" className="inline-block h-12" />
-        <p className="mt-4 text-white">株式会社めいかるえいど　ヒトシゴト事業部</p>
-        <p className="text-white">〒651-0084　神戸市中央区磯辺通4-2-26　新芙蓉ビル8F</p>
-      </div>
     </div>
   );
 };
