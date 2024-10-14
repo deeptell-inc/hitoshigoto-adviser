@@ -20,17 +20,16 @@ const Alliance = () => {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 bg-white text-black">
       <h1 className="text-3xl font-bold mb-6">事例一覧</h1>
-      <Card>
+      <Card className="bg-white text-black">
         <CardContent className="py-4">
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center">アドバイザー</h2>
             <div className="grid grid-cols-3 gap-8">
               {advisors.map((advisor, index) => (
-                <Card key={index}>
+                <Card key={index} className="bg-white text-black">
                   <CardContent className="p-4 text-center">
-                    {/* 画像のパスを確認 */}
                     <img src={advisor.image} alt={advisor.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
                     <h3 className="font-semibold">{advisor.name}</h3>
                     <p className="text-gray-600">{advisor.role}</p>
@@ -38,18 +37,17 @@ const Alliance = () => {
                 </Card>
               ))}
             </div>
-            </section>
+          </section>
         </CardContent>
       </Card>
-      <Card className="my-8">
+      <Card className="my-8 bg-white text-black">
         <CardContent className="py-4">
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center">企業様</h2>
             <div className="grid grid-cols-3 gap-8">
               {clients.map((client, index) => (
-                <Card key={index}>
+                <Card key={index} className="bg-white text-black">
                   <CardContent className="p-4 text-center">
-                    {/* 画像のパスを確認 */}
                     <img src={client.image} alt={client.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
                     <h3 className="font-semibold">{client.name}</h3>
                     <p className="text-gray-600">{client.role}</p>
@@ -57,7 +55,7 @@ const Alliance = () => {
                 </Card>
               ))}
             </div>
-            </section>
+          </section>
         </CardContent>
       </Card>
     </div>
