@@ -35,8 +35,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="relative py-4">
-        <img src="/advisors.png" alt="Advisors" className="w-full h-64 md:h-96 object-cover" />
+      <div className="relative py-4 md:py-0">
+        <img src="/advisors.png" alt="Advisors" className="w-full h-full md:h-128 object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black bg-opacity-70 flex flex-col justify-center items-center text-white px-4">
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 text-center">経営アドバイザーの力を引き出し、<br />事業拡大・改善をサポート</h1>
           <p className="text-base md:text-lg mb-8 text-center">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。</p>
