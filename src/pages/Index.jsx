@@ -1,30 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PhoneCall } from 'lucide-react';
 import SimpleContactForm from '../components/SimpleContactForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers, faHandshake, faBriefcase, faStar, faChartBar, faLock, faFileSignature, faGlobe, faBook, faLightbulb, faChartLine, faRobot  } from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faHandshake, faBriefcase, faStar, faChartBar, faLock, faFileSignature, faGlobe, faBook, faLightbulb, faChartLine, faRobot, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import AdvisorAppeal from './AdvisorAppeal';
 import ClientAppeal from './ClientAppeal';
 import Diagram from '../components/Diagram';
 import Info from '../components/Info';
 
 const Index = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 400) {
+      setShowScroll(true);
+    } else if (showScroll && window.pageYOffset <= 400) {
+      setShowScroll(false);
+    }
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollTop);
+    return () => {
+      window.removeEventListener('scroll', checkScrollTop);
+    };
+  }, [showScroll]);
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="relative">
-        <img src="/advisors.png" alt="Advisors" className="w-full h-auto object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black bg-opacity-70 flex flex-col justify-center items-center text-white">
-          <h1 className="text-6xl font-extrabold mb-4 text-center">経営アドバイザーの力を引き出し、<br />事業拡大・改善をサポート</h1>
-          <p className="text-xl mb-8 text-center">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。</p>
-          <div className="flex space-x-4">
+      <div className="relative py-4">
+        <img src="/advisors.png" alt="Advisors" className="w-full h-64 md:h-96 object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black bg-opacity-70 flex flex-col justify-center items-center text-white px-4">
+          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 text-center">経営アドバイザーの力を引き出し、<br />事業拡大・改善をサポート</h1>
+          <p className="text-base md:text-lg mb-8 text-center">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。</p>
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <Link to="/job-seeker-registration">
-              <Button className="bg-[#6FBA2C] text-white text-lg px-8 py-4 rounded-full shadow-lg hover:bg-[#5aa024] transition duration-300">アドバイザーに登録</Button>
+              <Button className="bg-[#6FBA2C] text-white text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-full shadow-lg hover:bg-[#5aa024] transition duration-300">アドバイザーに登録</Button>
             </Link>
             <Link to="/corporate-registration">
-              <Button className="bg-[#006CB8] text-white text-lg px-8 py-4 rounded-full shadow-lg hover:bg-[#005a94] transition duration-300">アドバイザーを探す</Button>
+              <Button className="bg-[#006CB8] text-white text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-full shadow-lg hover:bg-[#005a94] transition duration-300">アドバイザーを探す</Button>
             </Link>
           </div>
         </div>
@@ -33,7 +54,7 @@ const Index = () => {
         <section className="mb-20">
           <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">サービスの特徴</h2>
           <Diagram />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
             {[
               { icon: faUsers, title: "豊富な人材" },
               { icon: faHandshake, title: "マッチング" },
@@ -87,7 +108,7 @@ const Index = () => {
 
         <section className="mb-20">
           <h2 className="text-4xl font-bold mb-12 text-center text-gray-800">アドバイザー紹介</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             {[
               { name: "谷前　太喜", role: "AI技術顧問", image: "/tanimae.png" },
               { name: "杉本　迅", role: "AI技術顧問", image: "/sugimoto.png" },
@@ -151,6 +172,15 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {showScroll && (
+        <button
+          onClick={scrollTop}
+          className="fixed bottom-8 right-8 bg-[#006CB8] text-white p-4 rounded-full shadow-lg hover:bg-[#005a94] transition duration-300"
+        >
+          <FontAwesomeIcon icon={faArrowUp} size="lg" />
+        </button>
+      )}
     </div>
   );
 };
